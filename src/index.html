@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traveloka Electron</title>
+    <link rel="stylesheet" href="index.css">
+
+    
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="trips.html">Trip</a></li>
+            <li>
+                <div class="dropdown">
+                    <a href="restaurant.html">Restaurant</a>
+                    <div class="dropdown-content">
+                        <a href="halal.html">Halal Cuisines</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="countryInfo">
+        <!-- Information Output -->
+        <div class="country">
+            <h2>Country Information</h2>
+            <p id="commonName"></p>
+            <p id="officialName"></p>
+            <p id="capital"></p>
+            <p id="currencies"></p>
+            <p id="region"></p>
+            <p id="languages"></p>
+            <p id="population"></p>
+            <p id="continent"></p>
+            <p><a id="googleMapLink" target="_blank"></a></p>
+            <img id="flag" src="" alt="Flag">
+        </div>
+    
+        <!-- Country input section -->
+        <div class="country-input">
+            <h1>💖Read Country!</h1>
+            <p>Welcome to your Traveloka application.</p>
+            <input type="text" id="searchInput" placeholder="Enter country name">
+            <button id="searchButton">Enter</button>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>

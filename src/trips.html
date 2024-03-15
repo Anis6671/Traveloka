@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Trip Planning - Traveloka</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <h1>Traveloka - Trip Planning</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="trips.html">Trip</a></li>
+            <li>
+                <div class="dropdown">
+                    <a href="restaurant.html">Restaurant</a>
+                    <div class="dropdown-content">
+                        <a href="halal.html">Halal Cuisines</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <div class="search-container">
+        <label for="searchPlace">Search by Place:</label>
+        <input type="text" id="searchPlace" placeholder="Enter place to search">
+        <button onclick="searchTrips()" id="searchButton">Search</button>
+    </div>
+    <div class="trip-container">
+        <div class="form-container">
+            <div class="background-container">
+                <h2>Travel Planning</h2>
+                <p>Plan your trips with confidence by integrating weather information for selected destinations and dates.</p>
+            </div>
+            <!-- Form for adding a new trip -->
+            <form id="tripForm">
+                <label for="tripDate">Date:</label>
+                <input type="date" id="tripDate" required>
+                <label for="tripTime">Time:</label>
+                <input type="time" id="tripTime" required>
+                <label for="tripPlace">Place to Travel:</label>
+                <input type="text" id="tripPlace" required>
+                <label for="thingsToDo">Things to Do:</label>
+                <textarea id="thingsToDo" rows="4" required></textarea>
+                <button type="button" onclick="addTrip()">Add Trip</button>
+            </form>
+        </div>
+        <!-- Displaying trips in a calendar -->
+        <div class="trip-list" id="tripList"></div>
+    </div>
+    <script src="trips.js" defer></script>
+</body>
+</html>
